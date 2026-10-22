@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Travel Hub | Destinations</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="accessibility.css">
+  <script src="accessibility.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">The <span>Travel Guide Hub</span></div>
+      <button class="menu-toggle">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+         <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Explore our top destinations</h2>
+        <p>Use the filter buttons to sort the destinations by holiday type.</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active-filter" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="beach">Beach</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+
+      <div class="card-grid">
+        <div class="card destination-card city">
+          <img src="images/paris.jpg">
+          <div class="card-content">
+            <span class="tag">City</span>
+            <h3>Paris</h3>
+            <p>Romantic streets, famous landmarks and a rich art scene.</p>
+          </div>
+        </div>
+
+        <div class="card destination-card city">
+          <img src="images/tokyo.jpg" alt="Tokyo">
+          <div class="card-content">
+            <span class="tag">City</span>
+            <h3>Tokyo</h3>
+            <p>Tokyo blends technology, fashion, temples and incredible food.</p>
+          </div>
+        </div>
+
+        <div class="card destination-card beach">
+          <img src="images/bali.jpg" alt="Bali">
+          <div class="card-content">
+            <span class="tag">Beach</span>
+            <h3>Bali</h3>
+            <p>Bali offers tropical scenery and history also amazing beaches and nature.</p>
+          </div>
+        </div>
+
+        <div class="card destination-card beach">
+          <img src="images/maldives.jpg" alt="Maldives">
+          <div class="card-content">
+            <span class="tag">Beach</span>
+            <h3>Maldives</h3>
+            <p>Perfect for luxury travellers looking for beautiful white sand beaches and calm waters.</p>
+          </div>
+        </div>
+
+        <div class="card destination-card adventure">
+          <img src="images/swiss_alps.jpg" alt="Swiss Alps">
+          <div class="card-content">
+            <span class="tag">Adventure</span>
+            <h3>Swiss Alps</h3>
+            <p> Swiss Alps offer amazing views, skiing and fresh air.</p>
+          </div>
+        </div>
+
+        <div class="card destination-card adventure">
+          <img src="images/Dubai.jpg" alt="Dubai">
+          <div class="card-content">
+            <span class="tag">Adventure</span>
+            <h3>Dubai</h3>
+            <p> Discover the modern city of Dubai from skyscrapers to beach and amazing shopping centers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility & Contact - Travel Hub</title>
+  <style>
+    :root {
+      --turquoise-main: #72dfe7;
+      --turquoise-deep: #3bbcc7;
+      --white: #ffffff;
+      --off-white: #f9ffff;
+      --text-dark: #244b52;
+      --text-soft: #4f7075;
+      --shadow: 0 10px 25px rgba(59, 188, 199, 0.16);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 100%;
+      color: var(--text-dark);
+      background: var(--off-white);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--turquoise-main);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: var(--radius);
+      margin: 20px auto;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    main {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      color: var(--turquoise-deep);
+      margin-bottom: 15px;
+    }
+
+    .accessibility-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .accessibility-controls button {
+      flex: 1 1 48%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 12px;
+      background: var(--turquoise-deep);
+      color: var(--white);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .accessibility-controls button:hover {
+      background: var(--turquoise-main);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    input, select, textarea, button[type="submit"] {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #cbeff2;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      background: var(--turquoise-deep);
+      color: var(--white);
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--turquoise-main);
+    }
+
+    .form-message {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .success { color: #1a8f61; }
+    .error { color: #c84d6c; }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px 0;
+      color: var(--text-soft);
+    }
+
+ 
+    .dark-mode {
+      background: #222;
+      color: #f1f1f1;
+    }
+
+    .dark-mode input, .dark-mode select, .dark-mode textarea {
+      background: #333;
+      color: #f1f1f1;
+      border: 1px solid #888;
+    }
+
+    .high-contrast {
+      background: #000;
+      color: #ff0;
+    }
+
+    .high-contrast input, .high-contrast select, .high-contrast textarea {
+      background: #000;
+      color: #ff0;
+      border: 2px solid #ff0;
+    }
+
+    @media (max-width: 600px) {
+      .accessibility-controls button {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Accessibility & Contact</h1>
+    <p>Adjust the page settings for better readability and submit your inquiries easily.</p>
+  </header>
+
+  <main>
+    <h2>Accessibility Options</h2>
+    <div class="accessibility-controls">
+      <button id="increaseFont">Increase Font</button>
+      <button id="decreaseFont">Decrease Font</button>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+      <button id="highContrastToggle">Toggle High Contrast</button>
+      <button id="reduceMotionToggle">Toggle Reduce Motion</button>
+      <button id="resetAccessibility">Reset Settings</button>
+    </div>
+
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <select id="destination" required>
+        <option value="">Select a destination</option>
+        <option>Paris</option>
+        <option>Tokyo</option>
+        <option>Bali</option>
+        <option>Maldives</option>
+      </select>
+      <textarea id="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="formStatus" class="form-message"></p>
+    </form>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Travel Guide Hub. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const body = document.body;
+      const html = document.documentElement;
+      let fontSize = 100;
+      const contactForm = document.getElementById("contactForm");
+      const formStatus = document.getElementById("formStatus");
+
+      function safeGet(id) { return document.getElementById(id); }
+
+      safeGet("increaseFont")?.addEventListener("click", () => { fontSize += 10; html.style.fontSize = fontSize + "%"; });
+      safeGet("decreaseFont")?.addEventListener("click", () => { fontSize = Math.max(50, fontSize - 10); html.style.fontSize = fontSize + "%"; });
+      safeGet("darkModeToggle")?.addEventListener("click", () => { body.classList.toggle("dark-mode"); });
+      safeGet("highContrastToggle")?.addEventListener("click", () => { body.classList.toggle("high-contrast"); });
+      safeGet("reduceMotionToggle")?.addEventListener("click", () => {
+        if (body.style.scrollBehavior !== "auto") { body.style.scrollBehavior = "auto"; alert("Reduced motion activated."); }
+        else { body.style.scrollBehavior = "smooth"; alert("Reduced motion deactivated."); }
+      });
+      safeGet("resetAccessibility")?.addEventListener("click", () => { body.classList.remove("dark-mode","high-contrast"); html.style.fontSize="100%"; body.style.scrollBehavior="smooth"; });
+
+      contactForm?.addEventListener("submit", function(e){
+        e.preventDefault();
+        const name = safeGet("name").value.trim();
+        const email = safeGet("email").value.trim();
+        const destination = safeGet("destination").value;
+        const message = safeGet("message").value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!name || !email || !destination || !message){ formStatus.className="form-message error"; formStatus.textContent="Please complete all fields."; return; }
+        if(!emailPattern.test(email)){ formStatus.className="form-message error"; formStatus.textContent="Please enter a valid email."; return; }
+        formStatus.className="form-message success"; formStatus.textContent="Thank you! Your message has been submitted.";
+        contactForm.reset();
+      });
+
+      safeGet("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Travel Guide Hub</title>
+  <link rel="stylesheet" href="accessibility.css">
+  <script src="accessibility.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">The <span>Travel Guide Hub</span></div>
+      <button class="menu-toggle">Menu</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to plan your next trip? Get in touch with us.</p>
+      </div>
+
+      <div class="contact-layout">
+
+        
+        <div class="panel">
+          <h3>Send us a message</h3>
+
+          <form id="contactForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="destination">Destination</label>
+            <select id="destination">
+              <option value="">Select a destination</option>
+              <option>Paris</option>
+              <option>Tokyo</option>
+              <option>Bali</option>
+              <option>Maldives</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+
+            <p id="formStatus" class="form-message"></p>
+          </form>
+        </div>
+
+        
+        <div class="panel">
+          <h3>Contact Information</h3>
+
+          <p><strong>Email:</strong> enquiries@travelguidehub.com</p>
+          <p><strong>Phone:</strong> +44 123 456 789</p>
+          <p><strong>Location:</strong> London, UK</p>
+
+          <h3 style="margin-top:20px;">Opening Hours</h3>
+          <p>Mon - Fri: 9:00am - 6:00pm</p>
+          <p>Sat: 10:00am - 4:00pm</p>
+          <p>Sun: Closed</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Travel Guide Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

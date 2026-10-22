@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Destination - The Travel Hub</title>
+    <link rel="stylesheet" href="accessibility.css">
+    <script src="accessibility.js" defer></script>
+</head>
+<body>
+    
+     <nav class="navbar">
+        <div class="container nav-wrapper">
+        <div class="logo">The <span>Travel Guide Hub</span></div>
+        <button class="menu-toggle">Menu</button>
+
+        <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html"class="active">Booking</a></li>
+        <li><a href="contact.html" class=>Contact</a></li>
+      </ul>
+    </div>
+   </nav>
+            
+    <main>
+        <h1>Book Your Destination</h1>
+        <p>Select your dream destination and complete your booking below.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="destination">Destination *</label>
+                <select id="destination" name="destination" required>
+                    <option value="">-- Select a destination --</option>
+                    <option value="bali">Bali, Indonesia</option>
+                    <option value="tokyo">Tokyo, Japan</option>
+                    <option value="paris">Paris, France</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="alps">Swiss Alps, Switzerland</option>
+                    <option value="dubai">Dubai, UAE</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="checkin">Check-in Date *</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out Date *</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guests">Number of Guests *</label>
+                    <input type="number" id="guests" name="guests" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="rooms">Number of Rooms *</label>
+                    <input type="number" id="rooms" name="rooms" min="1" value="1" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Requests</label>
+                <textarea id="notes" name="notes" placeholder="Any special dietary needs, accessibility requirements, or other requests?"></textarea>
+            </div>
+
+            <button type="submit">Complete Booking</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; The Travel Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

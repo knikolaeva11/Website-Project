@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Travel Hub | Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accessibility.css">
+  <script src="accessibility.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">The <span>Travel Guide Hub</span></div>
+      <button class="menu-toggle">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="booking.html">Booking</a></li>
+         <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div id="accessibilityContainer">
+  <button id="accessibilityToggle">⚙️</button>
+  <div id="accessibilityPanel">
+    <h3>Accessibility</h3>
+    <button id="increaseFont">A+</button>
+    <button id="decreaseFont">A-</button>
+    <button id="darkModeToggle">Dark Mode</button>
+    <button id="highContrastToggle">High Contrast</button>
+    <button id="reduceMotionToggle">Reduce Motion</button>
+    <button id="resetAccessibility">Reset</button>
+  </div>
+</div>
+
+<header class="hero">
+
+  <div class="slideshow">
+    <img src="images/mainimage.jpg" class="slide active">
+  
+  </div>
+
+  <div class="container hero-content">
+    <h1>Find your next dream destination</h1>
+    <p>Explore beautiful locations around the world.</p>
+
+    <div class="btn-group">
+      <a href="destinations.html" class="btn">Explore</a>
+    </div>
+  </div>
+
+</header>
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Why Travellers Choose Us</h2>
+        <p>The Travel Guide Hub helps users explore their dream destinations and find an ideal travel package.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box reveal">
+          <h3>25+</h3>
+          <p>Destinations featured</p>
+        </div>
+        <div class="stat-box reveal">
+          <h3>10 Thousand</h3>
+          <p>Satisfied travellers</p>
+        </div>
+        <div class="stat-box reveal">
+          <h3>4.85★</h3>
+          <p>Average user rating</p>
+        </div>
+        <div class="stat-box reveal">
+          <h3>24/7</h3>
+          <p>Travel Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Our Destinations</h2>
+        <p>Browse popular travel destinations that are available now</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <img src="images/notre_dame.jpg" alt="Paris">
+          <div class="card-content">
+            <span class="tag">City Break</span>
+            <h3>Paris, France</h3>
+            <p>Experience iconic landmarks and emerge yourself in French history</p>
+            <a href="destinations.html" class="btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <img src="images/japan1.jpg" alt="Tokyo">
+          <div class="card-content">
+            <span class="tag">Culture</span>
+            <h3>Tokyo, Japan</h3>
+            <p>Discover a futuristic city full of tradition, food and shopping.</p>
+            <a href="destinations.html" class="btn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <img src="images/beach.jpg" alt="Maldives">
+          <div class="card-content">
+            <span class="tag">Luxury Escape</span>
+            <h3>Maldives</h3>
+            <p>Relax with turquoise waters, soft sand and beautiful villas.</p>
+            <a href="packages.html" class="btn">View Package</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container newsletter reveal">
+      <h2>Join our Newsletter</h2>
+      <p>Sign up for our newsletter and get 15% off your first package holiday! </p>
+      <form id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address">
+        <input type="submit" value="Subscribe">
+      </form>
+      <p id="newsletterStatus" class="form-message"></p>
+    </div>
+  </section>
